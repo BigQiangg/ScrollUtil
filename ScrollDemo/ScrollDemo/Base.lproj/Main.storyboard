@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fE1-bu-Iqi" customClass="LYGameScrollView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy5-s3-EJe">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="51809020778.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fwj-B8-odt">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="fwj-B8-odt" secondAttribute="bottom" id="Bay-ef-iN1"/>
+                                            <constraint firstItem="fwj-B8-odt" firstAttribute="top" secondItem="hy5-s3-EJe" secondAttribute="top" id="fjN-NH-VIg"/>
+                                            <constraint firstAttribute="trailing" secondItem="fwj-B8-odt" secondAttribute="trailing" id="mfA-76-Ae2"/>
+                                            <constraint firstItem="fwj-B8-odt" firstAttribute="leading" secondItem="hy5-s3-EJe" secondAttribute="leading" id="xQQ-S2-n6L"/>
+                                            <constraint firstAttribute="height" constant="200" id="y15-T8-nSa"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fN9-2E-mOT">
+                                        <rect key="frame" x="0.0" y="200" width="414" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPt-PX-9H4">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                <state key="normal" title="标题"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gPt-PX-9H4" secondAttribute="trailing" id="57e-XF-c7G"/>
+                                            <constraint firstAttribute="bottom" secondItem="gPt-PX-9H4" secondAttribute="bottom" id="SQz-aU-bDk"/>
+                                            <constraint firstItem="gPt-PX-9H4" firstAttribute="top" secondItem="fN9-2E-mOT" secondAttribute="top" id="VcC-eq-0Sh"/>
+                                            <constraint firstAttribute="height" constant="44" id="frd-MU-DKW"/>
+                                            <constraint firstItem="gPt-PX-9H4" firstAttribute="leading" secondItem="fN9-2E-mOT" secondAttribute="leading" id="oah-Kg-VLP"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="je6-qt-txR" customClass="LYGameTableView">
+                                        <rect key="frame" x="0.0" y="244" width="414" height="775"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="pZ9-24-o0z"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="E4U-Dn-d8L"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fN9-2E-mOT" secondAttribute="trailing" id="5RK-5y-HAi"/>
+                                    <constraint firstItem="hy5-s3-EJe" firstAttribute="width" secondItem="fE1-bu-Iqi" secondAttribute="width" id="7J0-0O-mNF"/>
+                                    <constraint firstAttribute="trailing" secondItem="hy5-s3-EJe" secondAttribute="trailing" id="8Z0-kt-Ju2"/>
+                                    <constraint firstItem="hy5-s3-EJe" firstAttribute="leading" secondItem="fE1-bu-Iqi" secondAttribute="leading" id="AvU-RD-1ch"/>
+                                    <constraint firstItem="hy5-s3-EJe" firstAttribute="top" secondItem="fE1-bu-Iqi" secondAttribute="top" id="Dxq-CB-YOb"/>
+                                    <constraint firstItem="fN9-2E-mOT" firstAttribute="top" secondItem="hy5-s3-EJe" secondAttribute="bottom" id="FdU-cQ-EGc"/>
+                                    <constraint firstItem="fN9-2E-mOT" firstAttribute="leading" secondItem="fE1-bu-Iqi" secondAttribute="leading" id="Mch-Zm-FAT"/>
+                                    <constraint firstItem="je6-qt-txR" firstAttribute="top" secondItem="fN9-2E-mOT" secondAttribute="bottom" id="UtM-fQ-mTW"/>
+                                    <constraint firstAttribute="bottom" secondItem="je6-qt-txR" secondAttribute="bottom" id="ZTp-M8-pDb"/>
+                                    <constraint firstItem="je6-qt-txR" firstAttribute="height" secondItem="fE1-bu-Iqi" secondAttribute="height" constant="-43" id="bMh-FN-wzW"/>
+                                    <constraint firstAttribute="trailing" secondItem="je6-qt-txR" secondAttribute="trailing" id="j17-fG-fLG"/>
+                                    <constraint firstAttribute="bottom" secondItem="je6-qt-txR" secondAttribute="bottom" id="lJf-2e-zrP"/>
+                                    <constraint firstItem="je6-qt-txR" firstAttribute="leading" secondItem="fE1-bu-Iqi" secondAttribute="leading" id="xbq-Xd-zXl"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fE1-bu-Iqi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Bwl-qB-VBX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fE1-bu-Iqi" secondAttribute="trailing" id="Mh2-8E-Uy3"/>
+                            <constraint firstItem="fE1-bu-Iqi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vhO-hs-e2J"/>
+                            <constraint firstItem="fE1-bu-Iqi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yZI-JT-0gN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgScrollView" destination="fE1-bu-Iqi" id="ZtH-p9-T6E"/>
+                        <outlet property="tableView" destination="je6-qt-txR" id="Nnm-rf-VfU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="51809020778.jpg" width="1500" height="1000"/>
+    </resources>
+</document>
